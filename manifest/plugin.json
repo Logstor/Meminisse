@@ -1,0 +1,19 @@
+{
+  "name": "Meminisse",
+  "author": "Alfred Röttger Rydahl",
+  "version": "0.0.1",
+  "license": "Plugin License",
+  "homepage": "Plugin Repository",
+  "dwcVersion": null,
+  "dwcDependencies": [],
+  "dwcResources": [],
+  "sbcRequired": true,
+  "sbcDsfVersion": "3.3",
+  "sbcData": {},
+  "sbcExecutable": "Plugin Executable",
+  "sbcExecutableArguments": null,
+  "sbcOutputRedirected":  true,
+  "sbcPermissions": [],
+  "sbcDependencies": [],
+  "rrfVersion": null
+}
