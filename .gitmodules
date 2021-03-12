@@ -1,0 +1,3 @@
+[submodule "src/dwc"]
+	path = src/dwc
+	url = https://github.com/Logstor/COBODWebControl.git
