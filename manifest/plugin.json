@@ -1,20 +1,21 @@
 {
-  "id": "0",
+  "id": "MeminissePlugin",
   "name": "Meminisse",
   "author": "COBOD International A/S",
-  "version": "0.0.1",
-  "license": "LGPL-3.0",
-  "homepage": "https://github.com/Logstor/Meminisse.git",
-  "dwcVersion": "3.3",
-  "dwcDependencies": [],
-  "dwcResources": [],
+  "version": "3.3-b2",
+  "license": "GPL-3.0-or-later",
+  "homepage": "https://github.com/Duet3D/DSF-Plugins",
   "sbcRequired": true,
-  "sbcDsfVersion": "3.3",
-  "sbcData": {},
-  "sbcExecutable": null,
-  "sbcExecutableArguments": null,
-  "sbcOutputRedirected":  true,
-  "sbcPermissions": [],
-  "sbcDependencies": [],
-  "rrfVersion": null
+  "sbcDsfVersion": "3.3-b2",
+  "sbcExecutable": "Meminisse",
+  "sbcExtraExecutables": [ ],
+  "sbcOutputRedirected": false,
+  "sbcPermissions": [
+    "CommandExecution",
+    "CodeInterceptionRead",
+    "ManagePlugins",
+    "ManageUserSessions",
+    "ObjectModelRead",
+    "RegisterHttpEndpoints"
+  ]
 }
