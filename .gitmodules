@@ -1,1 +1,7 @@
 
+[submodule "src/dwc"]
+	path = src/dwc
+	url = https://github.com/Logstor/COBODWebControl.git
+[submodule "src/sbc"]
+	path = src/sbc
+	url = https://github.com/Logstor/MeminisseSBC.git
