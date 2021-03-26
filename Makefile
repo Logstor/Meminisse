@@ -1,6 +1,9 @@
 OUTPUTFILENAME := Meminisse.zip
 MANIFEST := manifest/plugin.json
 BUILDFOLDER := build/toBeZipped
+WEBFOLDER := dwc
+BINFOLDER := dsf
+DATAFOLDER := sd
 
 ZIPFLAGS := -r -9
 
@@ -17,17 +20,17 @@ build: .buildnpm .buildsbc clean .createFolders .copy .zip
 	cd $(BUILDFOLDER) && zip $(ZIPFLAGS) ../$(OUTPUTFILENAME) *
 
 .createFolders:
-	mkdir -p $(BUILDFOLDER)/www/js
-	mkdir -p $(BUILDFOLDER)/www/img
-	mkdir -p $(BUILDFOLDER)/www/css
-	mkdir -p $(BUILDFOLDER)/bin
-	mkdir -p $(BUILDFOLDER)/rrf
+	mkdir -p $(BUILDFOLDER)/$(WEBFOLDER)/js
+	mkdir -p $(BUILDFOLDER)/$(WEBFOLDER)/img
+	mkdir -p $(BUILDFOLDER)/$(WEBFOLDER)/css
+	mkdir -p $(BUILDFOLDER)/$(BINFOLDER)
+	mkdir -p $(BUILDFOLDER)/$(DATAFOLDER)
 	cp $(MANIFEST) $(BUILDFOLDER)
 
 .copy:
-	cp src/dwc/dist/js/Meminisse* $(BUILDFOLDER)/www/js/
-	cp src/dwc/dist/css/Meminisse* $(BUILDFOLDER)/www/css/ || :
-	cp src/sbc/bin/Debug/net5.0/* $(BUILDFOLDER)/bin/ || :
+	cp src/dwc/dist/js/Meminisse* $(BUILDFOLDER)/$(WEBFOLDER)/js/
+	cp src/dwc/dist/css/Meminisse* $(BUILDFOLDER)/$(WEBFOLDER)/css/ || :
+	cp src/sbc/bin/Debug/net5.0/* $(BUILDFOLDER)/$(BINFOLDER)/ || :
 
 clean:
 	rm -rf build

@@ -1,21 +1,20 @@
 {
-  "id": "MeminissePlugin",
+  "id": "73",
   "name": "Meminisse",
   "author": "COBOD International A/S",
-  "version": "3.3-b2",
+  "version": "0.0.1",
+  "dwcVersion": "3.3.0-b2",
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/Duet3D/DSF-Plugins",
   "sbcRequired": true,
-  "sbcDsfVersion": "3.3-b2",
+  "sbcDsfVersion": "3.3",
   "sbcExecutable": "Meminisse",
-  "sbcExtraExecutables": [ ],
-  "sbcOutputRedirected": false,
+  "sbcExtraExecutables": [],
+  "sbcOutputRedirected": true,
   "sbcPermissions": [
-    "CommandExecution",
-    "CodeInterceptionRead",
-    "ManagePlugins",
-    "ManageUserSessions",
-    "ObjectModelRead",
-    "RegisterHttpEndpoints"
-  ]
+    "fileSystemAccess",
+    "registerHttpEndpoints"
+  ],
+  "sbcPackageDependencies": [],
+  "sbcPluginDependencies": []
 }
