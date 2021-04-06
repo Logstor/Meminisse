@@ -10,6 +10,8 @@ ZIPFLAGS := -r -9
 
 build: .buildnpm .buildsbc clean .createFolders .copy .zip
 
+sbc: .buildsbc .copy .zip
+
 .buildnpm:
 	cd src/dwc && npm install && npm cache verify && npm run build
 

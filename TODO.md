@@ -2,6 +2,8 @@
 
 ## Error on plugin installation
 
-Manifest is invalid apparently
+## SBC
+
+## DWC
 
 # Notes
