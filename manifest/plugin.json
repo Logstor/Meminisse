@@ -1,5 +1,5 @@
 {
-  "id": "73",
+  "id": "COBODMeminisse",
   "name": "Meminisse",
   "author": "COBOD International A/S",
   "version": "0.0.1",
@@ -12,8 +12,7 @@
   "sbcExtraExecutables": [],
   "sbcOutputRedirected": true,
   "sbcPermissions": [
-    "fileSystemAccess",
-    "registerHttpEndpoints"
+    "superUser"
   ],
   "sbcPackageDependencies": [],
   "sbcPluginDependencies": []

@@ -1,5 +1,6 @@
 OUTPUTFILENAME := Meminisse.zip
 MANIFEST := manifest/plugin.json
+SBCBUILDFOLDER := build
 BUILDFOLDER := build/toBeZipped
 WEBFOLDER := dwc
 BINFOLDER := dsf
@@ -13,7 +14,7 @@ build: .buildnpm .buildsbc clean .createFolders .copy .zip
 	cd src/dwc && npm install && npm cache verify && npm run build
 
 .buildsbc:
-	cd src/sbc && dotnet build
+	cd src/sbc && dotnet publish -r linux-arm -o $(SBCBUILDFOLDER) /p:PublishTrimmed=true
 
 .zip:
 	rm -rf build/$(OUTPUTFILENAME)
@@ -30,7 +31,7 @@ build: .buildnpm .buildsbc clean .createFolders .copy .zip
 .copy:
 	cp src/dwc/dist/js/Meminisse* $(BUILDFOLDER)/$(WEBFOLDER)/js/
 	cp src/dwc/dist/css/Meminisse* $(BUILDFOLDER)/$(WEBFOLDER)/css/ || :
-	cp src/sbc/bin/Debug/net5.0/* $(BUILDFOLDER)/$(BINFOLDER)/ || :
+	cp src/sbc/$(SBCBUILDFOLDER)/* $(BUILDFOLDER)/$(BINFOLDER)/ || :
 
 clean:
 	rm -rf build
