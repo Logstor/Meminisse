@@ -1,12 +1,12 @@
 OUTPUTFILENAME := Meminisse.zip
-MANIFEST := manifest/plugin.json
+MANIFEST 	:= manifest/plugin.json
 SBCBUILDFOLDER := build
 BUILDFOLDER := build/toBeZipped
-WEBFOLDER := dwc
-BINFOLDER := dsf
-DATAFOLDER := sd
+WEBFOLDER 	:= dwc
+BINFOLDER 	:= dsf
+DATAFOLDER 	:= sd
 
-ZIPFLAGS := -r -9
+ZIPFLAGS 	:= -r -9
 
 build: .buildnpm .buildsbc clean .createFolders .copy .zip
 
