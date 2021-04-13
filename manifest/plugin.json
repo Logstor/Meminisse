@@ -1,11 +1,11 @@
 {
-  "id": "COBODMeminisse",
+  "id": "Meminisse",
   "name": "Meminisse",
   "author": "COBOD International A/S",
   "version": "0.0.1",
   "dwcVersion": "3.3.0-b2",
   "license": "GPL-3.0-or-later",
-  "homepage": "https://github.com/Duet3D/DSF-Plugins",
+  "homepage": "https://github.com/Logstor/Meminisse",
   "sbcRequired": true,
   "sbcDsfVersion": "3.3",
   "sbcExecutable": "Meminisse",
