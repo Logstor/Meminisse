@@ -10,6 +10,8 @@ ZIPFLAGS 	:= -r -9
 
 build: .buildnpm .buildsbc clean .createFolders .copy .zip
 
+release: .buildnpm .releasesbc clean .createFolders .copy .zip
+
 sbc: .buildsbc .copy .zip
 
 .buildnpm:
@@ -17,6 +19,9 @@ sbc: .buildsbc .copy .zip
 
 .buildsbc:
 	cd src/sbc && dotnet publish -r linux-arm -o $(SBCBUILDFOLDER) /p:PublishTrimmed=true
+
+.releasesbc:
+	cd src/sbc && dotnet publish -c Release -r linux-arm -o $(SBCBUILDFOLDER) /p:PublishTrimmed=true
 
 .zip:
 	rm -rf build/$(OUTPUTFILENAME)
