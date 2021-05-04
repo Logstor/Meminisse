@@ -23,7 +23,8 @@ This plugin is used to continuously log the state of the machine.
 The configuration file **MeminisseConfig.json** can be found and edited in the file explorer in the **System** tab.
 From the **System Directory** the path is **COBOD/Meminisse/MeminisseConfig.json**.
 
-The configuration can be changed at runtime, but this requires the plugin to be in the **idle state**. If the **ConsoleLogLevel** is 2 or below there will be a confirmation print in the DWC console. If you need to confirm it's in the **idle state**, then you can set the **ConsoleLogLevel** to 1. More verbose prints will now be sent to the console e.g. **Entering {state}**, **Exiting {state}**.
+The configuration can be changed at runtime, but this requires the plugin to be in the **idle state**. If the **ConsoleLogLevel** is 2 or below there will be a confirmation print in the DWC console that says: "**[Meminisse]: INFO: Refreshing Configuration**". <br>
+If you need to confirm it's in the **idle state**, then you can set the **ConsoleLogLevel** to 1. More verbose prints will now be sent to the console e.g. **Entering {state}**, **Exiting {state}**.
 
 | Property | Description|
 | ------------ | -----------|
@@ -51,7 +52,7 @@ You can see all the logs in the **Meminisse** tab. Here you'll see an ordered li
 
 ### Log file
 
-The log file conforms to the csv format with semicolon(;) as the default delimiter. This means the log files can be imported to and analysed in excel.
+The log file conforms to the csv format with semicolon( **;** ) as the default delimiter. This means the log files can be imported to and analysed in excel.
 
 ---
 
