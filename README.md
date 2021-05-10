@@ -31,6 +31,7 @@ If you need to confirm it's in the **idle state**, then you can set the **Consol
 | ConsoleLogLevel | 0: Trace, 1: Debug, 2: Info(Default), 3: Warning, 4: Error |
 | LogsPrMin | How many log entries should we have pr. minute. Default is 60 log/min = 1 log/sec |
 | IdleCheckPrMin | How often should we check if a print is started, when the machine is idle? Default is 30 check/min |
+| LogWhilePaused | Keep logging when machine is paused? **true** or **false** |
 | LogPosition | Log the position of the axis? **true** or **false** |
 | LogPrintSpeed | Log the speed parameters? **true** or **false**|
 | LogTime | Log print duration and pause duration? **true** or **false**|
@@ -46,7 +47,7 @@ When the installation is done, and the plugin is started as described in the **I
 
 You can see all the logs in the **Meminisse** tab. Here you'll see an ordered list of all the logs stored on the RPI. You can press **DOWNLOAD** to retrieve the file for further analysis or **DELETE** to remove it from the RPI.
 
-**NOTE:** DELETE doesn't work in 0.4.0 - Deletion of logs needs to be done manually over ssh to the RPI.
+Use the **REFRESH** button to refresh the list. New logs won't appear by themselves.
 
 ---
 
@@ -60,11 +61,11 @@ The log file conforms to the csv format with semicolon( **;** ) as the default d
 
 - Prerequisites isn't fulfilled, super user plugin.
   
-  - This is because Duet doesn't allow super user plugins as default. You need to ssh to the RPI, and type **sudo nano /opt/dsf/conf/config.json**. Use the nano text editor to change the value **RootPluginSupport** from **false** to **true**. Press **CTRL+O** to overwrite the file and **CTRL+X** to exit the editor. Now you probably just have to reboot the RPI, and then this error is fixed.
+  - This is because Duet doesn't allow super user plugins as default. You need to ssh to the RPI, and type **sudo nano /opt/dsf/conf/config.json**. Use the nano text editor to change the value **RootPluginSupport** from **false** to **true**. Press **CTRL+O** to overwrite the file and **CTRL+X** to exit the editor. Now you probably have to reboot the RPI, and then this error is fixed.
 
 - InvalidOperation DuetPluginService.
 
-  - In v3.3 Duet introduced DuetPluginService which needs to run besides DuetControlServer and DuetWebServer. Run the following four commands to start and enable on start the following services.
+  - In v3.3 Duet introduced DuetPluginService which needs to run besides DuetControlServer and DuetWebServer. Run the following four case-sensitive commands to start and enable on start the following services.
 
     - sudo systemctl start duetpluginservice
     - sudo systemctl enable duetpluginservice
@@ -75,4 +76,4 @@ The log file conforms to the csv format with semicolon( **;** ) as the default d
 
 ## FAQ
 
-Currently just write or call Alfred at arr@cobod.com 
+Currently just write or call Alfred at arr@cobod.com.
