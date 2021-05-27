@@ -39,6 +39,7 @@ If you need to confirm it's in the **idle state**, then you can set the **Consol
 | ConsoleLogLevel | 0: Trace, 1: Debug, 2: Info(Default), 3: Warning, 4: Error |
 | CSVDelimiter | What should delimit entities in the csv logfile? Default is ";" |
 | LogsPrMin | How many log entries should we have pr. minute. Default is 60 log/min = 1 log/sec |
+| FlushToFileEveryXLogs | How often should the log buffer be written to the log file? Default is every 10th we flush the buffer to log file. |
 | IdleCheckPrMin | How often should we check if a print is started, when the machine is idle? Default is 30 check/min |
 | LogWhilePaused | Keep logging when machine is paused? **true** or **false** |
 | LogPosition | Log the position of the axis? **true** or **false** |
