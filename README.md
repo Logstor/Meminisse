@@ -53,11 +53,11 @@ If you need to confirm it's in the **idle state**, then you can set the **Consol
 
 ### Use
 
-When the installation is done, and the plugin is started as described in the **Installation** section, then the plugin just logs whenever the machine is processing Gcode from a file.
+When the installation is done, and the plugin is started as described in the **Installation** section, then the plugin just logs whenever the machine is processing GCode from a file.
 
-**printComment**: Beware when adding a **printComment** to the logfile header, as this needs to be done while you aren't printing. If you do it while logging is active, then, upon save, overwrite the file with what's in your editor, which doesn't contain all the data logged while you were writing the **printComment**.
+**printComment**: Beware when adding a **printComment** to the logfile header, as this needs to be done while you aren't printing. If you do it while logging is active, then, upon save, you overwrite the file with what's in your editor, which doesn't contain all the data logged while you were writing the **printComment**.
 
-You can see all the logs in the **Meminisse** tab. Here you'll see an ordered list of all the logs stored on the RPI. You can press **DOWNLOAD** to retrieve the file for further analysis or **DELETE** to remove it from the RPI.
+You can see all the logs in the **Meminisse** tab. Here you'll see an ordered list of all the logs stored on the RPI. You can press **DOWNLOAD** or **DOWNLOAD ALL** to retrieve the file(s) for further analysis or **DELETE** to remove it from the RPI.
 
 Use the **REFRESH** button to refresh the list. New logs won't appear by themselves.
 
