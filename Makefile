@@ -14,11 +14,18 @@ release: .buildnpm .releasesbc clean .createFolders .copy .zip
 
 sbc: .buildsbc .copy .zip
 
+opc:
+	cd src/sbc && docker run \
+				--mount type=bind,source=/home/Logstor/Documents/temp/COBOD/Meminisse/src/sbc/opc,target=/model/src \
+				--entrypoint "/app/PublishModel.sh" \
+				sailavid/ua-modelcompiler:opcua_rocks_tested \
+				/model/src/myModel duet /model/src/Published
+
 .buildnpm:
 	cd src/dwc && npm install && npm cache verify && npm run build
 
 .buildsbc:
-	cd src/sbc && dotnet publish -r linux-arm -o $(SBCBUILDFOLDER) /p:PublishTrimmed=true
+	cd src/sbc && dotnet publish -c Debug -r  linux-arm -o $(SBCBUILDFOLDER) /p:PublishTrimmed=true
 
 .releasesbc:
 	cd src/sbc && dotnet publish -c Release -r linux-arm -o $(SBCBUILDFOLDER) /p:PublishTrimmed=true
